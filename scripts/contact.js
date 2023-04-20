@@ -4,7 +4,7 @@ const submitButton = document.querySelector("form");
 const content = document.getElementById("contact-page");
 console.log(content);
 
-function changeContact(e){
+function changeContact(){
     // e.preventDefault();
     content.innerHTML = "<p>Thank you for your message</p>";
     content.style.fontSize = "24px";

@@ -43,6 +43,8 @@ function clearButton (){
     calculatedCost.innerHTML = 0;
     cost = 0;
     numberOfDays = 0;
+    full.classList.add("clicked");
+    half.classList.remove("clicked");
 }
 
 clearDays.addEventListener("click", clearButton);
@@ -55,7 +57,7 @@ function halfDay (){
     half.classList.add("clicked");
     full.classList.remove("clicked");
     costPerDay = 20;
-    recalculate()
+    recalculate();
 }
 
 half.addEventListener("click", halfDay);
@@ -66,7 +68,7 @@ function fullDay (){
     full.classList.add("clicked");
     half.classList.remove("clicked");
     costPerDay = 35;
-    recalculate()
+    recalculate();
 }
 
 full.addEventListener("click", fullDay);
@@ -77,6 +79,6 @@ full.addEventListener("click", fullDay);
 // when a calculation is needed, set the innerHTML of the calculated-cost element to the appropriate value
 
 function recalculate(){
-    cost = costPerDay * numberOfDays
+    cost = costPerDay * numberOfDays;
     calculatedCost.innerHTML = cost;
 }
