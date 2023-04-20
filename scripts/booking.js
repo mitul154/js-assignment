@@ -43,8 +43,7 @@ function clearButton (){
     calculatedCost.innerHTML = 0;
     cost = 0;
     numberOfDays = 0;
-    full.classList.add("clicked");
-    half.classList.remove("clicked");
+    fullDay();
 }
 
 clearDays.addEventListener("click", clearButton);
